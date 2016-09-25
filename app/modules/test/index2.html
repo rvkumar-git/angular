@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Second Html</title>
+	<script type="text/javascript" src="lib/angular/angular.js"></script>
+    <script type="text/javascript" src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
+</head>
+<body ng-app="sampleApp">
+
+<a href="#/route1/abc">Route 1</a><br/>
+<a href="#/route2/123">Route 2</a><br/>
+
+<div ng-view></div>
+<div ng-view></div>
+<script>
+	
+var m = angular.module("m",['ui.router']);
+m.config(function($stateProvider,$urlRouterProvider){
+	$stateProvider.state("stateName",{
+		template:"<h3>StateProvider Testing</h3>"
+	})
+	$urlRouterProvider.otherwise("/hello");	
+});
+
+	var module = angular.module("sampleApp", ['ngRoute']);
+
+	module.config(['$routeProvider',
+        function($routeProvider) {
+            $routeProvider.
+                when('/route1/:param', {
+                    templateUrl: 'route1.html',
+                    controller: 'RouteController'
+                }).
+                when('/route2/:param', {
+                    templateUrl: 'route2.html',
+                    controller: 'RouteController'
+                }).
+                otherwise({
+                    redirectTo: '/'
+                });
+        }]);
+
+    module.controller("RouteController", function($scope,$routeParams) {
+    	$scope.param = $routeParams.param;
+    })
+</script>
+
+</body>
+</html>

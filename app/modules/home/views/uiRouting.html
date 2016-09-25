@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en" >
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/font-awesome.css"/>
+    <link rel="stylesheet" href="../style/uiRouting.css"/>
+    <meta charset="UTF-8">
+    <title>Angular Set Up</title>
+    <script type="text/javascript" src="../../../lib/angular/angular.js"></script>
+    <script  type="text/javascript" src="../../../lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="../controllers/uiRouting.js"></script>
+</head>
+<style>.active { color: red; font-weight: bold; }</style>
+<body>
+
+<!-- HEADER AND NAVBAR -->
+<header>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="home">Angular Routing Example</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a ui-sref="home" ui-sref-active="active"><i class="fa fa-home"></i> Home</a></li>
+                <li><a ui-sref="about" ui-sref-active="active"><i class="fa fa-shield"></i> About</a></li>
+                <li><a ui-sref="contact" ui-sref-active="active"><i class="fa fa-comment"></i> Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="">
+    <p><ui-view></ui-view></p>
+</div>
+<!-- MAIN CONTENT AND INJECTED VIEWS -->
+<div id="main">
+    <!-- angular templating -->
+    <!-- this is where content will be injected -->
+
+</div>
+</body>
+</html>

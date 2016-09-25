@@ -1,0 +1,23 @@
+{
+  "name": "Angularfirst",
+  "authors": [
+    "Jaswant Tyagi <jaswant.kumar@kelltontech.com>"
+  ],
+  "description": "angular first project",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "directory": "./app/lib",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "app/lib"
+  ],
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1"
+  }
+}

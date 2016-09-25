@@ -1,0 +1,23 @@
+    <!DOCTYPE html>
+    <html ng-app="core">
+        <head>
+            <title>Angular First Project</title>
+            <script type="text/javascript" src="lib/angular/angular.js"></script>
+            <script type="text/javascript" src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+            <script type="text/javascript" src="modules/core/afApp.js"></script>
+            <script type="text/javascript" src= "modules/core/controllers/coreCtrl.js"></script>
+            <style>
+                .ng-scope {
+                    border: 1px solid red;
+                    margin: 3px;
+                }
+
+            </style>
+        </head>
+        <body >
+
+        <a href="modules/home/views/uiRouting.html">UI Routing</a>
+        <!-- <a ui-sref="root">rootState</a> -->
+        <div ui-view></div>
+        </body>
+    </html>
